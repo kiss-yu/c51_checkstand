@@ -21,7 +21,7 @@ void init()
 void sendConnect()
 {
 	int i = 0;
-	char pdata content[43] = "AT+CIPSTART=\"TCP\",\"192.168.1.101\",8080\r\n\r\n";
+	char pdata content[43] = "AT+CIPSTART=\"TCP\",\"192.168.1.101\",8888\r\n\r\n";
 	TI=0;
 	for(i = 0;i < 43;i ++){
 		SBUF=content[i];

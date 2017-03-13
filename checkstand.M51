@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        03/13/2017  21:26:45  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/13/2017  22:20:51  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  checkstand (?C_STARTUP)
             CODE    0000H     0003H     ABSOLUTE     
             CODE    0003H     001EH     UNIT         ?PR?NUM_2?WIFI
                     0021H     0002H                  *** GAP ***
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 2
 
 
             CODE    0023H     0003H     ABSOLUTE     
@@ -119,7 +119,7 @@ SEGMENT                            BIT_GROUP          DATA_GROUP          PDATA_
   +--> ?PR?GETPACE?WIFI
 
 ?PR?SENDCONNECT?WIFI            -----    -----      -----    -----      000AH    002BH
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 3
 
 
   +--> ?CO?WIFI
@@ -179,7 +179,7 @@ SEGMENT                            BIT_GROUP          DATA_GROUP          PDATA_
 *** NEW ROOT ***************************************************
 
 ?PR?SET?WIFI                    -----    -----      -----    -----      -----    -----
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 4
 
 
   +--> ?PR?_STRLEN?STRLEN
@@ -239,7 +239,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   D:00B8H         PUBLIC        IP
   B:0098H.0       PUBLIC        RI
   C:0DE0H         PUBLIC        _sleep
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 5
 
 
   D:0009H         PUBLIC        k1
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   C:0C8EH         LINE#         25
   C:0C9BH         LINE#         26
   C:0C9EH         LINE#         27
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 6
 
 
   C:0C9EH         LINE#         29
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   C:0E25H         LINE#         64
   C:0E28H         LINE#         65
   -------         ENDPROC       NUM_3
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 7
 
 
   -------         PROC          NUM_4
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   D:0006H         SYMBOL        i
   X:000AH         SYMBOL        content
   -------         ENDDO         
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 8
 
 
   C:0CDCH         LINE#         21
@@ -479,7 +479,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   C:0D87H         LINE#         60
   C:0D89H         LINE#         61
   C:0D89H         LINE#         62
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 9
 
 
   C:0D98H         LINE#         63
@@ -539,7 +539,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   C:0AF9H         LINE#         105
   C:0B09H         LINE#         106
   C:0B0EH         LINE#         107
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 10
 
 
   C:0B0EH         LINE#         108
@@ -599,7 +599,7 @@ SYMBOL TABLE OF MODULE:  checkstand (?C_STARTUP)
   C:0376H         PUBLIC        ?C?FPNEG
   -------         ENDMOD        ?C?FPNEG
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  21:26:45  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/13/2017  22:20:51  PAGE 11
 
 
   -------         MODULE        EXP
