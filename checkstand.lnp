@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"wifi.obj" 
+TO "checkstand" 
+RAMSIZE(256) 
