@@ -65,9 +65,28 @@ void sendGoodsId(char * id)
 	}
 	sleep(10);
 }
-int getPace()
+double doublePrace(int location)
 {
-	int i = 0,pace = 0;
+	double pace = 0;
+	int i = 1;
+	for(;i < location;i ++)
+	{
+		pace += (((int)RECEIVE_STRING[i] - 48)*pow(10,(location - 1 - i)));
+	}
+	i++,location=1;
+	for(;i < strlen(RECEIVE_STRING)-1;i ++,location ++)
+	{
+		pace += (((int)RECEIVE_STRING[i] - 48)*pow(10,-location));
+	}
+	return pace;
+}
+double getPace()
+{
+	int i = 0;
+	double pace = 0;
+	for(i = 1;i < strlen(RECEIVE_STRING)-1;i ++)
+		if(RECEIVE_STRING[i] == 0x2e)
+			return doublePrace(i);
 	for(i = 1; i < strlen(RECEIVE_STRING)-1;i ++)
 	{
 		pace += (((int)RECEIVE_STRING[i] - 48)*pow(10,(strlen(RECEIVE_STRING)-2-i)));
@@ -76,7 +95,7 @@ int getPace()
 		pace++;
 	return pace;
 }
-int sendTcp(char * id)
+double sendTcp(char * id)
 {
 	sendConnect();
 	sendSize();
@@ -88,7 +107,7 @@ int sendTcp(char * id)
 	while(OR_NOT_RECEIVE);
 	return getPace();
 }
-int getGoodsPrace(char * id)
+double getGoodsPrace(char * id)
 {
 	init();
 	return sendTcp(id);
