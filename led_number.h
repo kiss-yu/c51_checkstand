@@ -11,7 +11,8 @@ void led_number(int number);
 char code number[]={
 0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90
 };
-char code wei[]={0xf7,0xfb,0xfd,0xfe}; 
+char code wei[]={0xf7,0xfb,0xfd,0xfe};
+
 int time=0,k1,k2,k3,k4;
 void led_number(int number){
 	time=number;
@@ -79,16 +80,5 @@ void num_4(){
 		sleep(1);
 }
 void xianshi(int kc){
-	switch(kc){
-		case 0:P0=number[0];break;
-		case 1:P0=number[1];break;
-		case 2:P0=number[2];break;
-		case 3:P0=number[3];break;
-		case 4:P0=number[4];break;
-		case 5:P0=number[5];break;
-		case 6:P0=number[6];break;
-		case 7:P0=number[7];break;
-		case 8:P0=number[8];break;
-		case 9:P0=number[9];break;
-	}
+	P0 = number[kc];
 }

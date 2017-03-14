@@ -6,4 +6,7 @@ void main()
 	if(prace == 9.66)
 		while(1)
 			led_number(966);
+		else
+			while(1)
+				led_number(333);
 }

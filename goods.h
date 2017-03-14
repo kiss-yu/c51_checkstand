@@ -3,7 +3,9 @@
 #include <math.h>
 #include <led_number.h>
 char pdata RECEIVE_STRING[10] = "";
+//char pdata MESSAGE[5] = "";
 char RECEIVE_CHAR = 0,OR_NOT_RECEIVE = 0;
+int kkk = 10;
 void init()
 {
 	ET1=0;
@@ -57,9 +59,10 @@ void sendColseTcp()
 void sendGoodsId(char * id)
 {
 	int i = 0;
+	char te[8] = "12345678";
 	TI=0;
 	for(;i < 8;i ++){
-		SBUF=id[i];
+		SBUF=te[i];
 		while(!TI);
 		TI=0;
 	}
@@ -95,8 +98,23 @@ double getPace()
 		pace++;
 	return pace;
 }
+double check()
+{
+	int i =0;
+	while(i < 50)
+	{
+		if(OR_NOT_RECEIVE == 0)
+			break;
+		if(i == 49)
+			return 0;
+		sleep(20);
+		i++;
+	}
+	return 1;
+}
 double sendTcp(char * id)
 {
+	OR_NOT_RECEIVE = 0;
 	sendConnect();
 	sendSize();
 	sendGoodsId(id);
@@ -104,7 +122,9 @@ double sendTcp(char * id)
 	OR_NOT_RECEIVE = 1;
 	sendConnect();
 	sleep(10);
-	while(OR_NOT_RECEIVE);
+	if(check() == 0)
+		return 0;
+	sendColseTcp();
 	return getPace();
 }
 double getGoodsPrace(char * id)
@@ -128,4 +148,19 @@ void set() interrupt 4
 			OR_NOT_RECEIVE = 0;
 		}
 	}
+//	else if(OR_NOT_RECEIVE == 0)
+//	{
+//		if(strlen(MESSAGE) != 0)
+//			MESSAGE[strlen(MESSAGE)] = RECEIVE_CHAR;
+//		if(RECEIVE_CHAR == 0x4f)
+//		{
+//			MESSAGE[0] = RECEIVE_CHAR;
+//			MESSAGE[1] = 0x00;
+//		}
+//		if(RECEIVE_CHAR == 0x4b && strlen(MESSAGE) == 1 && MESSAGE[0] == 0x4f)
+//		{
+//			MESSAGE[strlen(MESSAGE)] = 0x00;
+//			OR_NOT_RECEIVE = 2;
+//		}
+//	}
 }
