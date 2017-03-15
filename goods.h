@@ -59,10 +59,9 @@ void sendColseTcp()
 void sendGoodsId(char * id)
 {
 	int i = 0;
-	char te[8] = "12345678";
 	TI=0;
 	for(;i < 8;i ++){
-		SBUF=te[i];
+		SBUF=id[i];
 		while(!TI);
 		TI=0;
 	}
@@ -105,8 +104,10 @@ double check()
 	{
 		if(OR_NOT_RECEIVE == 0)
 			break;
-		if(i == 49)
+		if(i == 49){
+			sendColseTcp();
 			return 0;
+		}
 		sleep(20);
 		i++;
 	}
@@ -117,14 +118,11 @@ double sendTcp(char * id)
 	OR_NOT_RECEIVE = 0;
 	sendConnect();
 	sendSize();
-	sendGoodsId(id);
-	sendColseTcp();
 	OR_NOT_RECEIVE = 1;
-	sendConnect();
+	sendGoodsId(id);
 	sleep(10);
 	if(check() == 0)
 		return 0;
-	sendColseTcp();
 	return getPace();
 }
 double getGoodsPrace(char * id)
@@ -148,19 +146,4 @@ void set() interrupt 4
 			OR_NOT_RECEIVE = 0;
 		}
 	}
-//	else if(OR_NOT_RECEIVE == 0)
-//	{
-//		if(strlen(MESSAGE) != 0)
-//			MESSAGE[strlen(MESSAGE)] = RECEIVE_CHAR;
-//		if(RECEIVE_CHAR == 0x4f)
-//		{
-//			MESSAGE[0] = RECEIVE_CHAR;
-//			MESSAGE[1] = 0x00;
-//		}
-//		if(RECEIVE_CHAR == 0x4b && strlen(MESSAGE) == 1 && MESSAGE[0] == 0x4f)
-//		{
-//			MESSAGE[strlen(MESSAGE)] = 0x00;
-//			OR_NOT_RECEIVE = 2;
-//		}
-//	}
 }

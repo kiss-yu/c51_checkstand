@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   WIFI                                                              03/14/2017 15:27:49 PAGE 1   
+C51 COMPILER V9.53.0.0   WIFI                                                              03/14/2017 22:46:36 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE WIFI
@@ -8,29 +8,24 @@ COMPILER INVOKED BY: D:\C51\C51\BIN\C51.EXE wifi.c OPTIMIZE(8,SPEED) BROWSE DEBU
 line level    source
 
    1          #include <goods.h>
-*** WARNING C280 IN LINE 59 OF goods.h: 'id': unreferenced local variable
    2          void main()
    3          {
    4   1        char id[8] ="59681562";
    5   1        double prace = getGoodsPrace(id);
-   6   1        if(prace == 9.66)
-   7   1          while(1)
-   8   1            led_number(966);
-   9   1          else
-  10   1            while(1)
-  11   1              led_number(333);
-  12   1      }
+   6   1        while(1)
+   7   1          led_number((int)prace);
+   8   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =   1588    ----
-   CONSTANT SIZE    =    105    ----
+   CODE SIZE        =   1557    ----
+   CONSTANT SIZE    =     97    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =     10      75
-   DATA SIZE        =     14      44
+   DATA SIZE        =     14      36
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
